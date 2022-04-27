@@ -1,0 +1,598 @@
+/* .new-task-class{
+  opacity: 1;
+  visibility: visible;
+}
+
+.choose-status{
+  opacity: 1;
+  visibility: visible;
+}
+
+*/
+
+*{
+  margin: 0;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  transition: .2s ease-in-out;
+  font-size: 16px;
+
+}
+
+.choose-status {
+  z-index: 2;
+  width: 200px;
+  position: absolute;
+  left: 188px;
+  text-align: left;
+  top: -120px;
+    visibility: hidden;
+}
+
+body{
+  background: #d8ffaa;
+
+}
+
+a{
+  color: black
+}
+
+.new-task-class{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+
+  background: rgba(0, 0, 0, 0.5);
+
+}
+
+.new-task{
+
+  width: 420px+300px;
+  height: 460px;
+  position: fixed;
+  border-radius: 5px;
+  border: 2px solid #f0ffde;
+  background: white;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -250px;
+
+}
+
+
+.new-top{
+  border-bottom: 2px solid yellow;
+  margin-bottom: 5px;
+
+}
+
+.new-text{
+  display: inline-block;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  width: 380px;
+}
+
+.new-close{
+  display: inline-block;
+  position: relative;
+  right: 5px;
+}
+
+
+
+.new-close svg{
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 6px;
+}
+
+.new-task input{
+  border: 2px solid yellow;
+  border-radius: 5px;
+  background: white;
+  outline: none;
+  height: 28px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+#id_title input{
+  float: left;
+}
+
+#id_description input{
+  float: left;
+  width: 400px;
+  padding-bottom: 200px;
+  padding-top: 15px;
+}
+
+#id_date input{
+  float: left;
+
+}
+
+.new-add-class{
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+
+.new-add-class input{
+  position: relative;
+  left: 25px;
+  float: right;
+}
+
+
+.new-text{
+  text-align: left;
+}
+
+.new-text li{
+
+  list-style-type: none;
+  position: relative;
+  left: -30px;
+  top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.new-add-class img{
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+}
+
+
+header{
+  max-width: 1000px;
+  right: 40px;
+  position: relative;
+  height: 80px;
+  margin-bottom: 10px;
+
+}
+
+
+header li{
+  display: inline-block;
+}
+
+
+.button-class{
+  margin-top: 20px;
+  float: left;
+
+}
+
+.button-class button{
+
+  width: 140px;
+  height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  border: 2px solid white;
+  position: relative;
+  border-radius: 5px;
+  background: white;
+  margin-right: 20px;
+
+}
+
+.button-class button:hover{
+  background: #f0ffde;
+  cursor: pointer;
+}
+
+
+.profile-class{
+  position: relative;
+  margin-top: 20px;
+  float: right;
+
+
+}
+
+.profile-class button{
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#pic{
+ width: 50px;
+ position: relative;
+ top: -10px;
+right: -20px
+}
+
+
+#email{
+  padding: 5px;
+  padding-top: 7px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid white;
+  position: relative;
+  top: -30px;
+  right: -20px
+
+}
+
+
+
+.log{
+  z-index: 3;
+  width: 200px;
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  background: white;
+  width: 110px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  float: right;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.log:hover{
+  cursor: pointer;
+  background: #fcfcfc;
+}
+
+
+.log p{
+  position: relative;
+  top: 8px;
+}
+
+
+main{
+ max-width: 1000px;
+
+}
+
+.status{
+  position: relative;
+  right: 90px;
+  margin-bottom: 20px;
+  float: right;
+  padding: 5px;
+  border-radius: 5px;
+  background: white;
+  border: 5px solid yellow;
+}
+
+
+.task-class{
+  float: left;
+  text-align: left;
+}
+
+.task-class p{
+  padding: 10px;
+
+}
+
+.task-class li{
+  list-style-type: none;
+}
+
+.name{
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.add{
+  position: relative;
+  top: 5px;
+  right: 10px;
+  float: right;
+  display: inline-block;
+
+
+}
+
+
+
+.add button{
+
+  border: 2px solid #dbdbdb;
+  position: relative;
+  border-radius: 5px;
+  background: white;
+  outline: none;
+  height: 28px;
+
+}
+.add button:hover{
+  background: white;
+  border: 2px solid white;
+  cursor: pointer;
+  outline: none;
+}
+
+.name-task{
+
+}
+
+.name-task p{
+
+  padding: 0px;
+  padding-bottom: 5px;
+}
+
+.exp p{
+  padding: 0px;
+  padding-bottom: 10px;
+  color: #696969
+}
+
+
+.name-button button{
+   display: inline-block;
+   border: none;
+   background: none;
+   display: inline-block;
+   float: right;
+   position: relative;
+   top: -35px;
+
+}
+
+.name-button button:hover{
+  cursor:pointer;
+}
+
+.name button:hover{
+  cursor: pointer;
+}
+
+.date-task{
+  position: relative;
+  left: -2px;
+  width: 100px;
+  padding: 2px;
+  border-radius: 5px;
+  background: #f0ffde;
+}
+
+.date-task img{
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+
+.done-class{
+  width: 300px;
+  background: white;
+  border: 2px solid white;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 5px;
+  vertical-align: top;
+}
+
+.done-class:hover{
+  background: none;
+  outline: none;
+  border: 2px solid white;
+
+
+}
+
+.done-class li{
+  position: relative;
+  left: -35px;
+  width: 275px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid green;
+  margin-bottom: 10px;
+}
+
+.process-class{
+  float: left;
+  background: white;
+  border: 2px solid white;
+  display: inline-block;
+
+  margin-right: 5px;
+  border-radius: 5px;
+
+}
+
+.process-class:hover{
+
+  background: none;
+  outline: none;
+  border: 2px solid white;
+
+}
+
+.process-class li{
+display: inline-block;
+position: relative;
+  left: -35px;
+  width: 285px;
+top:5px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid yellow;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.late-class{
+  width: 320px;
+  background: white;
+  border: 2px solid white;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 5px;
+  vertical-align: top;
+}
+
+.late-class:hover{
+  background: none;
+  outline: none;
+  border: 2px solid white;
+}
+
+.late-class li{
+  position: relative;
+  left: -35px;
+  width: 305px;
+  height: 20px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid red;
+  margin-bottom: 10px;
+}
+
+.people-class{
+  width: 245px;
+  background: white;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+
+.people-class input{
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+
+
+.trio-pic{
+  display: inline-block;
+  position: absolute;
+  top: 117px;
+  left: 25px;
+}
+
+.change-status{
+  display: inline-block;
+  position: absolute;
+  left: 50px;
+
+  top: 107px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  height: 72px;
+  width: 120px
+}
+
+.change-status p{
+  text-align: left;
+  position: relative;
+  left:-10px;
+  padding-left: 5px;
+  padding-bottom: 2px;
+  font-size: 13px;
+}
+
+.change-status li{
+
+  position:relative;
+
+  top: -6px;
+  left: -40px;
+  height: 20px;
+  width: 110px;
+  background: none;
+  border-radius: 0;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#green{
+border: none}
+
+#green:hover{
+  cursor: pointer;
+  color: green;
+}
+
+#red:hover{
+  cursor: pointer;
+  color: red;
+}
+
+#red{
+  position: relative;
+  top: -13px;
+  border: none
+}
+
+
+#yellow:hover{
+  cursor: pointer;
+  color: #deae00;
+}
+
+#yellow{
+  position: relative;
+  top: -20px;
+  border: none;
+}
+
+input[type=submit]{
+  width: 229px;
+  height: 28px;
+
+  border: 2px solid #dbdbdb;
+  position: relative;
+  border-radius: 5px;
+  background: white;
+  margin-right: 20px;
+}
+
+input[type=submit]:hover{
+
+  background: #f0ffde;
+  cursor: pointer;
+}
+
+
+
+.add-name input{
+  width: 229px;
+  height: 28px;
+  margin-top: 10px;
+  border: 2px solid #dbdbdb;
+  position: relative;
+  border-radius: 5px;
+  background: white;
+  margin-right: 20px;
+  opacity: 1;
+  visibility: visible;
+
+}
+
+.add-name input:focus{
+  outline: none;
+}

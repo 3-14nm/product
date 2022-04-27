@@ -1,0 +1,100 @@
+*{
+  margin: 0;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  transition: .2s ease-in-out;
+  font-size: 12px;
+}
+
+body{
+  background: #bed2a5;
+
+}
+
+p{
+  padding-bottom: 15px;
+}
+
+input{
+  width: 220px;
+  height: 20px;
+  border: 1px solid #d6d6d6;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+input:focus{
+  outline: none;
+  border: 1px solid #d6d6d6;
+
+}
+
+.button{
+  margin-top: 5px;
+  position: relative;
+  background: white;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #d6d6d6;
+  outline: none;
+  border-radius: 5px;
+
+}
+
+button{
+  margin-top: 5px;
+  position: relative;
+  background: white;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #d6d6d6;
+  outline: none;
+  border-radius: 5px;
+
+}
+
+button:hover{
+  background: #d6d6d6;
+  color: white;
+  outline: none;
+}
+
+.button:hover{
+  background: #d6d6d6;
+  color: white;
+  outline: none;
+}
+
+
+.reg-class{
+ height: 100%;
+ position: relative;
+ top: 100px;
+ border-radius: 5px;
+
+}
+
+.body-class{
+
+  border-radius: 5px;
+  border: 1px solid #d6d6d6;
+  padding: 20px;
+  width:260px;
+  height: 165px;
+  background: white;
+}
+
+a{
+    color: black;
+}
+
+.text{
+    margin-top: 10px;
+    font-size: 15px;
+    color: black;
+}
+
+.text:hover{
+    cursor: pointer;
+    text-decoration: line;
+}

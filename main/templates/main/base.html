@@ -1,0 +1,40 @@
+
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title%}{% endblock %}</title>
+  {% block css%}{% endblock %}
+  {% block js%}{% endblock %}
+</head>
+<body><center>
+
+  <header>
+
+    <a href="{% url 'home'%}"><ul class="button-class">
+      <li><button>команды</button></li>
+    </ul></a>
+    <div class="profile-class">
+
+      <a href='javascript:onclick=close()'><button type="button" name="button">
+        <ul>
+          <li id="email">gojosatoru@mail.ru</li>
+          <li id="pic"><img src="https://img.icons8.com/ios-glyphs/90/000000/cat-profile--v1.png" width="100%"/></li>
+        </ul>
+      </button></a>
+      <div class="log">
+        <p>Выйти</p>
+      </div>
+    </div>
+
+  </header>
+
+  {% block content%}{% endblock %}
+
+
+</center>
+
+</body>
+
+</html>

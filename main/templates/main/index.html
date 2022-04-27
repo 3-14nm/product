@@ -1,0 +1,117 @@
+{% extends 'main/base.html'%}
+{%load static%}
+
+{% block title%}
+To Do in Teams
+{% endblock%}
+
+{% block css%}
+<link href='{% static "main/css/index.css" %}' rel="stylesheet"/>
+{% endblock%}
+
+{% block js%}
+<script src='{% static "main/js/index.js" %}'></script>
+{% endblock %}
+
+{% block content%}
+<main><center>
+
+
+  <ul class="team-class">
+    <a href="{% url 'taske'%}"><li>
+
+      <div class="team-top">
+
+        <div class="team-info">
+          <div class="name">
+            <p>название группы</p>
+          </div>
+
+          <div class="people">
+            <div class="man">
+              <img src="https://img.icons8.com/ios-glyphs/30/000000/user-male--v1.png" width="25px"/>
+            </div>
+            <div class="num-people">
+              <p>16</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="team-menu">
+          <button><img src="https://img.icons8.com/ios/30/000000/menu-2.png" height="22px;"/></button>
+        </div>
+      </div>
+
+      <div class="team-bottom">
+        <div class="done">
+          <img src="https://img.icons8.com/emoji/48/000000/green-circle-emoji.png" width="15px"/>
+          <p>5 заданий сделано</p>
+        </div>
+        <div class="process">
+          <img src="https://img.icons8.com/emoji/48/000000/yellow-circle-emoji.png" width="15px"/>
+          <p>5 заданий в процессе</p>
+        </div>
+        <div class="late">
+          <img src="https://img.icons8.com/emoji/48/000000/red-circle-emoji.png" width="15px"/>
+          <p>5 заданий просрочено</p>
+        </div>
+        <div class="status">
+          <p>вы владелец/ица</p>
+        </div>
+
+      </div>
+    </li></a>
+
+    {%for task in tasks%}
+    <a href="{% url 'task' pk=task.pk %}"><li>
+
+      <div class="team-top">
+
+        <div class="team-info">
+          <div class="name">
+            <p>{{task.title}}</p>
+          </div>
+
+
+        </div>
+        <div class="team-menu">
+          <button><img src="https://img.icons8.com/ios/30/000000/menu-2.png" height="22px;"/></button>
+        </div>
+      </div>
+
+      <div class="team-bottom">
+
+        <div class="status">
+          <p>задача создана: {{task.date}}</p>
+        </div>
+
+      </div>
+
+    </li></a>
+    {% endfor %}
+    <a href='javascript:onclick=openAdd()'>
+      <div class="make-new-task">
+        <img src="https://cdn.glitch.com/14337578-e6cf-489e-98b0-85f618d70d35%2Fplus.png?v=1632933874134"/>
+      </div>
+    </a>
+    <div class='add-new-task'>
+      <div class='add-new'>
+        <p>Введите название задачи</p>
+
+        <p>Не более 40 символов</p>
+
+        <form method="POST" class="post-form">
+          {% csrf_token %}
+          {{ form.as_p }}
+
+          <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+        <a href='javascript:onclick=closeAdd()'><div class="cancel"><button>отмена</button></div></a>
+
+      </div>
+    </div>
+  </ul>
+
+
+</center></main>
+{% endblock%}

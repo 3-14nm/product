@@ -1,0 +1,28 @@
+{%load static%}
+<!DOCTYPE html>
+<head>
+    <link href='{% static "main/css/login.css" %}' rel="stylesheet"/>
+</head>
+<body><center>
+
+    <div class="reg-class">
+        <div class="body-class">
+            <div class="registration"><p>Авторизация</p></div>
+
+
+            <input type="submit" class="button" value="enter">
+
+            <a href="{% url 'login'%}"><div class="text"><p>нет аккаунта?</p></div></a>
+        </div>
+    </div>
+
+</center></body>
+
+
+<!--<div class="body-class">-->
+<!--    <div class="registration"><p>Авторизация</p></div>-->
+<!--    <div class="login"><input id="account-id" placeholder="почта"></div>-->
+<!--    <div class="password"><input type="password" id="password-id" placeholder="пароль"></div>-->
+<!--    <a href=""><button>войти</button></a>-->
+<!--    <a href="{% url 'login'%}"><div class="text"><p>нет аккаунта?</p></div></a>-->
+<!--</div>-->
